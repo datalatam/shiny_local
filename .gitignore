@@ -37,3 +37,10 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+# Ignore site
+_site/
+
+#Ignoring files
+index.tex
+index.log
