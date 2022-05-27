@@ -1,6 +1,8 @@
 ---
-title: "Desplegando Shiny Apps de manera local en Windows"
+output: github_document
 ---
+
+# "Desplegando Shiny Apps de manera local en Windows"
 
 ## Herramientas a utilizar:
 
@@ -53,7 +55,7 @@ Ejecutar el .bat e instalar con un navegador basado en Chromium. (Edge, Chrome, 
 Al desplegarse la aplicación, su puerto es aleatorio, lo que provoca que el link entre Chromium y la aplicación en shiny sea temporal tras el primer arranque, esto se soluciona asignando un puerto en el archivo app/app.r, con el código:
 options(shiny.port = 8231)
 
-![](C:\Users\Ixpantia\Desktop\git_ixpantia\data_latam\puerto.png){}
+![](puerto.png){}
 
 Es necesario correr el archivo batch de la aplicación ("MyApplication" en el ejemplo) cada vez que arranca el sistema operativo, debido a que tras el primer arranque, el motor de R portable deja de ejecutarse, una vez apagado el equipo. Esto provoca que R Portable no se despliegue en arranques posteriores a la primera ejecución del archivo batch. Esto se soluciona creando un acceso directo al archivo batch y pegándolo en la carpeta:
 
@@ -66,7 +68,7 @@ Para obtener su ruta, también se puede acceder usando la ventana Run/Ejecutar, 
 shell:startup
 ```
 
-![](C:\Users\Ixpantia\Desktop\git_ixpantia\data_latam\shell.png){}
+![](shell.png){}
 
 Esto lo que consigue es que el acceso directo se ejecute cada vez que el sistema arranque, desplegando así el archivo batch, junto al motor de R portable.
 
